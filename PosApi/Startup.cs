@@ -22,7 +22,9 @@ namespace PosApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public static void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvcCore().AddFormatterMappings().AddJsonFormatters().AddCors();
+            services.AddMvcCore().AddFormatterMappings(options => {
+                options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+     }).AddJsonFormatters().AddCors();
             services.AddScoped<IConnectionFactory>(_ => new ConnectionFactory(""));
         }
 
