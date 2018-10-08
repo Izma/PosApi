@@ -4,6 +4,6 @@ namespace Data
 {
     public interface IConnectionFactory
     {
-        MySqlConnection GetConnection();
+        MySqlConnection Connection { get; }
     }
 }

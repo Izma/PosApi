@@ -11,9 +11,6 @@ namespace Data
             connectionString = connection;
         }
 
-        public MySqlConnection GetConnection()
-        {
-            return new MySqlConnection(connectionString);
-        }
+        public MySqlConnection Connection => new MySqlConnection(connectionString);
     }
 }

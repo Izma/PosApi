@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Data.Models;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace Data
 {
-   public interface IProductRepository
+    public interface IProductRepository
     {
+        Task<IList<ProductModel>> GetProducts();
     }
 }

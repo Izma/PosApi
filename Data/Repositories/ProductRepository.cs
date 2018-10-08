@@ -1,13 +1,23 @@
-﻿using System;
+﻿using Dapper;
+using Data.Models;
 using System.Collections.Generic;
-using System.Text;
+using System.Data;
+using System.Threading.Tasks;
 
 namespace Data
 {
-    public class ProductRepository: BaseRepository
+    public class ProductRepository: BaseRepository, IProductRepository
     {
-        protected ProductRepository(IConnectionFactory factory) : base(factory)
+        public ProductRepository(IConnectionFactory factory) : base(factory)
         {
+        }
+
+        public async Task<IList<ProductModel>> GetProducts()
+        {
+            return await WithConnection(async c=> {
+                var result = await c.QueryAsync<ProductModel>(sql: "CALL spGetProducts()", commandType: CommandType.Text, param: null).ConfigureAwait(false);
+                return result.AsList();
+            }).ConfigureAwait(false);
         }
     }
 }

@@ -7,18 +7,18 @@ namespace Data
 {
     public abstract class BaseRepository
     {
-        private readonly IConnectionFactory connection;
+        private readonly IConnectionFactory connectionFactory;
 
         protected BaseRepository(IConnectionFactory factory)
         {
-            connection = factory;
+            connectionFactory = factory;
         }
 
         protected async Task<T> WithConnection<T>(Func<IDbConnection, Task<T>> getData)
         {
             try
             {
-                using (var cn = connection.GetConnection())
+                using (var cn = connectionFactory.Connection)
                 {
                     await cn.OpenAsync().ConfigureAwait(false);
                     return await getData(cn).ConfigureAwait(false);
