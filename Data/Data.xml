@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Data</name>
+    </assembly>
+    <members>
+        <member name="T:Data.Models.ProductModel">
+            <summary>
+            ProductModel class
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.ProductId">
+            <summary>
+            Get o set productId
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.Name">
+            <summary>
+            Get or set product name
+            </summary>
+        </member>
+    </members>
+</doc>

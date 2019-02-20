@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Data</name>
+    </assembly>
+    <members>
+        <member name="T:Data.Models.GroupingModel">
+            <summary>
+            GroupingModel class
+            </summary>
+        </member>
+        <member name="P:Data.Models.GroupingModel.GroupingId">
+            <summary>
+            Gets or sets the grouping identifier.
+            </summary>
+            <value>
+            The grouping identifier.
+            </value>
+        </member>
+        <member name="P:Data.Models.GroupingModel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Data.Models.GroupingModel.StatusId">
+            <summary>
+            Gets or sets the status identifier.
+            </summary>
+            <value>
+            The status identifier.
+            </value>
+        </member>
+        <member name="T:Data.Models.ProductModel">
+            <summary>
+            ProductModel class
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.ProductId">
+            <summary>
+            Get o set productId
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.Name">
+            <summary>
+            Get or set product name
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.BarCode">
+            <summary>
+            Get or set Bar code
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.SalePrice">
+            <summary>
+            Get or set SalePrice
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.BuyPrice">
+            <summary>
+            Get or set BuyPrice
+            </summary>
+        </member>
+        <member name="P:Data.Models.ProductModel.Stock">
+            <summary>
+            Get or set Stock
+            </summary>
+        </member>
+        <member name="T:Data.Repositories.GroupingRepository">
+            <summary>
+            GroupingRepository class
+            </summary>
+            <seealso cref="T:Data.BaseRepository" />
+            <seealso cref="T:Data.Repositories.IGroupingRepository" />
+        </member>
+        <member name="M:Data.Repositories.GroupingRepository.#ctor(Data.IConnectionFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Data.Repositories.GroupingRepository"/> class.
+            </summary>
+            <param name="factory">The factory.</param>
+        </member>
+        <member name="M:Data.Repositories.GroupingRepository.GetGrouping">
+            <summary>
+            Gets the grouping.
+            </summary>
+            <returns>List of GroupingModel</returns>
+        </member>
+        <member name="T:Data.Repositories.IGroupingRepository">
+            <summary>
+            IGroupingRepository interface
+            </summary>
+        </member>
+        <member name="T:Data.IProductRepository">
+            <summary>
+            IProductRepository interface
+            </summary>
+        </member>
+        <member name="M:Data.IProductRepository.GetProducts">
+            <summary>
+            Gets the products.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Data.IProductRepository.DeleteProduct(System.String)">
+            <summary>
+            Deletes the product.
+            </summary>
+            <param name="productId">The product identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Data.IProductRepository.CreateProduct(Data.Models.ProductModel)">
+            <summary>
+            Creates the product.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Data.ProductRepository">
+            <summary>
+            ProductRepository class
+            </summary>
+            <seealso cref="T:Data.BaseRepository" />
+            <seealso cref="T:Data.IProductRepository" />
+        </member>
+        <member name="M:Data.ProductRepository.#ctor(Data.IConnectionFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Data.ProductRepository"/> class.
+            </summary>
+            <param name="factory">The factory.</param>
+        </member>
+        <member name="M:Data.ProductRepository.CreateProduct(Data.Models.ProductModel)">
+            <summary>
+            Creates the product.
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Data.ProductRepository.DeleteProduct(System.String)">
+            <summary>
+            Deletes the product.
+            </summary>
+            <param name="productId">The product identifier.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Data.ProductRepository.GetProducts">
+            <summary>
+            Gets the products.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

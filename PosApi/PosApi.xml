@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PosApi</name>
+    </assembly>
+    <members>
+        <member name="M:PosApi.Controllers.GroupingController.Get">
+            <summary>
+            Get group
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PosApi.Controllers.GroupingController.Get(System.Int32)">
+            <summary>
+            Get group by id
+            </summary>
+            <param name="groupId">groupId</param>
+            <returns></returns>
+        </member>
+        <member name="M:PosApi.Controllers.ProductController.#ctor(Data.IProductRepository)">
+            <summary>
+            Product constructors method
+            </summary>
+            <param name="product"></param>
+        </member>
+        <member name="M:PosApi.Controllers.ProductController.Get">
+            <summary>
+            Get product list
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:PosApi.Controllers.ProductController.Get(System.String)">
+            <summary>
+            Get product by id
+            </summary>
+            <param name="productId">productId</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:PosApi.Controllers.ProductController.Delete(System.String)">
+            <summary>
+            Delete a product by id
+            </summary>
+            <param name="productId">string</param>
+            <returns></returns>
+        </member>
+        <member name="M:PosApi.Controllers.ProductController.Add(Data.Models.ProductModel)">
+            <summary>
+            Add a new product
+            </summary>
+            <param name="product"></param>
+            <returns>int</returns>
+        </member>
+        <member name="M:PosApi.Controllers.ProductController.Update(System.String,Data.Models.ProductModel)">
+            <summary>
+            Update a new product
+            </summary>
+            <param name="productId">productId</param>
+            <param name="product">Model</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
